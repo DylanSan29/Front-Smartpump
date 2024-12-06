@@ -1,0 +1,18 @@
+/* Global styles to prevent horizontal scroll */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders don't increase the width */
+  overflow-x: hidden; /* Prevents horizontal overflow for all elements */
+}
+
+html, body {
+  height: 100%; /* Full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scroll on the entire document */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; /* Optional: Set a background color */
+}

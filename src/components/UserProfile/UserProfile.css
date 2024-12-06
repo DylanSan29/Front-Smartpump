@@ -1,0 +1,184 @@
+/* General: Bloquear scroll horizontal */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Bloquear scroll horizontal */
+}
+
+/* Contenedor principal */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%; /* Ancho del 100% */
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Cabecera del perfil */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Imagen de perfil */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Opciones del perfil */
+.profile-options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100%; /* Hacer que los botones ocupen todo el espacio disponible */
+}
+
+/* Botón base */
+.profile-btn {
+  background-color: #007bff; /* Azul estándar */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1 1 150px;
+  max-width: 200px;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  width: auto; /* Mejor ajuste en pantallas pequeñas */
+}
+
+.profile-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Detalles del perfil */
+.profile-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #333;
+  word-wrap: break-word;
+  white-space: normal;
+  transition: background-color 0.2s ease;
+}
+
+.profile-details li:nth-child(even) {
+  background-color: #f7f9fc;
+}
+
+.profile-details li:hover {
+  background-color: #eaf4ff;
+}
+
+.profile-details li strong {
+  color: #007bff;
+}
+
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 1024px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-options {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile-btn {
+    width: 100%; /* Hacer los botones de ancho completo en pantallas medianas */
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-details li {
+    font-size: 14px;
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-details li {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+
+  .profile-btn {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%; /* Botones a ancho completo */
+  }
+}
+
+/* Responsividad para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-details li {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+
+  .profile-btn {
+    font-size: 12px;
+    padding: 8px;
+    width: 100%; /* Botones a ancho completo */
+  }
+}

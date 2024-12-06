@@ -1,0 +1,178 @@
+/* General styling for the Edit Profile page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1200px; /* Mayor ancho para pantallas grandes */
+  margin: 40px auto;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.edit-profile-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.edit-profile-form {
+  display: grid;
+  grid-template-columns: 1fr; /* Un campo por fila inicialmente */
+  gap: 20px; /* Espaciado entre los campos */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* EditProfile.css */
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .edit-profile-form {
+    grid-template-columns: repeat(2, 1fr); /* Dos campos por fila */
+    gap: 20px 40px; /* Más espacio horizontal */
+  }
+
+  .submit-button {
+    grid-column: span 2; /* Botones ocupan toda la fila */
+  }
+}
+.edit-button {
+  display: inline-block;
+  background-color: #0056b3; /* Gris elegante */
+  color: white;
+  padding: 12px 20px; /* Ajuste de relleno para más consistencia */
+  border-radius: 8px;
+  text-decoration: none; /* Quita subrayado */
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Tamaño según el contenido */
+  margin-top: 20px; /* Espaciado superior */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.edit-button:hover {
+  background-color: #5a6268; /* Oscurece el gris al pasar el ratón */
+  transform: scale(1.02); /* Efecto de zoom ligero */
+}
+
+.edit-button:active {
+  background-color: #545b62; /* Gris más oscuro cuando se presiona */
+  transform: scale(0.98); /* Contracción al presionar */
+}
+
+/* For desktop */
+@media (min-width: 1200px) {
+  .edit-profile-container {
+    padding: 40px;
+  }
+
+  .edit-profile-form {
+    grid-template-columns: repeat(3, 1fr); /* Tres campos por fila */
+    gap: 30px 50px; /* Ajusta el espacio en pantallas grandes */
+  }
+
+  .submit-button {
+    grid-column: span 3; /* Botones ocupan toda la fila */
+  }
+  .edit-button {
+    display: inline-block;
+    background-color: #6c757d; /* Gris elegante */
+    color: white;
+    padding: 12px 20px; /* Ajuste de relleno para más consistencia */
+    border-radius: 8px;
+    text-decoration: none; /* Quita subrayado */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto; /* Tamaño según el contenido */
+    margin-top: 20px; /* Espaciado superior */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+
+  .edit-button:hover {
+    background-color: #5a6268; /* Oscurece el gris al pasar el ratón */
+    transform: scale(1.02); /* Efecto de zoom ligero */
+  }
+
+  .edit-button:active {
+    background-color: #545b62; /* Gris más oscuro cuando se presiona */
+    transform: scale(0.98); /* Contracción al presionar */
+  }
+}

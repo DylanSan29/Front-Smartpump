@@ -1,0 +1,124 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4b9bff, #a6d9f7); /* Dynamic background gradient */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Login container */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Increased size for laptops */
+    text-align: center;
+    height: auto;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out; /* Subtle entrance animation */
+  }
+  
+  /* Logo styles */
+  .logo {
+    width: 180px; /* Adjusted for larger screens */
+    margin-bottom: 25px;
+  }
+  
+  /* Form inputs and button */
+  .login-form input {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    display: block;
+    transition: all 0.3s ease; /* Smooth focus transition */
+  }
+  
+  .login-form input:focus {
+    border-color: #4b9bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(75, 155, 255, 0.4);
+  }
+  
+  .login-form button {
+    width: 90%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #4b9bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #357abd;
+    box-shadow: 0 5px 15px rgba(53, 122, 189, 0.3);
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Adjust for smaller devices */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 100%;
+      height: 100vh; /* Occupy full screen on smaller devices */
+      border-radius: 0; /* Remove rounded corners */
+      padding: 20px;
+      box-shadow: none;
+    }
+  
+    .login-form input,
+    .login-form button {
+      font-size: 16px; /* Larger font for better readability */
+    }
+  
+    .logo {
+      width: 140px; /* Smaller logo for mobile */
+    }
+  }
+  
+  /* Adjust for laptops */
+  @media (min-width: 1024px) {
+    .login-container {
+      max-width: 700px; /* Larger size for laptops */
+      padding: 60px;
+      border-radius: 30px;
+    }
+  
+    .login-form input,
+    .login-form button {
+      font-size: 18px; /* Slightly larger font for desktops */
+    }
+  
+    .logo {
+      width: 200px; /* Larger logo */
+    }
+  }
+  
